@@ -71,7 +71,7 @@ You can use any SQL database you like. If you don't have any favorites use Postg
 
 At the end it should roughly look like this:
 
-![Image of services](/backend-challenge.png)
+![Image of services](/backend-devs/backend-challenge.png)
 
 
 ### Hints
