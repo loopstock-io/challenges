@@ -30,15 +30,15 @@ You need to do the following:
 
 You need to write and run two instances of the following simple service:
 
-- every 100ms generates a random integer from 1 to 10000
+- every 100ms generates a random integer between 1 and 10000
 - the value gets pushed through the message broker of your choice
 
 
 ### Message broker
 
 The services are communicating through a message broker. You can use any protocol and broker you like. The simpler the better.
+If you don’t have any preferences we suggest to use MQTT protocol. You can run MQTT broker using the toke/mosquitto image:
 
-If you don't have any preferences we suggest to use [mosquitto](https://mosquitto.org/). You can run mosquitto using the `toke/mosquitto` image:
 ```
 docker run -it -p 1883:1883 --name=mosquitto  toke/mosquitto
 ```
@@ -78,3 +78,7 @@ At the end it should roughly look like this:
     ```
     docker run -it -p 1883:1883 --name=mosquitto  toke/mosquitto
     ```
+
+### Bonus points
+
+* have both random integer generators coordinate with each other so that you never get the same random number from both of them at the same time
