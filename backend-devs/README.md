@@ -22,10 +22,8 @@ You need to do the following:
 - Write the simple random integer generator
 - Write the integer average calculator
 - Write the API that stores avarages in a SQL database and serves them to an http endpoint
-
-
 - Write configuration and/or explain how to run it locally
-- Describe how'd you provision a set of linux machines and how'd you orchestrate, monitor and troubleshoot these services.
+- Describe how you would provision a set of linux machines and how'd you orchestrate, monitor and troubleshoot these services.
 
 
 ### Random integer generators
@@ -68,13 +66,11 @@ You can use any SQL database you like. If you don't have any favorites use Postg
 - Serves simple API requests for the last 5s avarage
 
 
+### Hints
 
 At the end it should roughly look like this:
 
 ![Image of services](/backend-devs/backend-challenge.png)
-
-
-### Hints
 
 - You're free to use any languages and any libraries.
 
