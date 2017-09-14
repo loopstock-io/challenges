@@ -1,62 +1,46 @@
-# loopstock backend developer challenge
+# loopstock frontend developer challenge
 
 This is a challenge for the frontend developers applying to work at [loopstock.io](http://www.loopstock.io).
 
 For the general information about the challenges please check the [README.md](../README.md).
 
 
-## CHALLENGE TITLE
+## Dashboard
 
 The system you need to implement consists of the following components:
 
-- Two instances of random integer generator
-- A message broker
-- Integer average calculator
-- A SQL Database
-- A basic API
-
-All the components should be run with docker. The details of what each of the components should do are below.
-
-You need to do the following:
-
-- Write the simple random integer generator
-- Write the integer average calculator
-- Write the API that stores avarages in a SQL database and serves them to an http endpoint
-- Write configuration and/or explain how to run it locally
-- Describe how you would provision a set of linux machines and how'd you orchestrate, monitor and troubleshoot these services.
+* An index.html containing the layout
+* A react app with:
+    * Login
+    * Dashboard / Admin View with 1 route
+    * A `/listings` page with two tabs
 
 
-### COMP 1
+### Login / Authentification
 
-You need to write and run two instances of the following simple service:
+* Write a React Redux based app that authenticates via firebase authentication
+* When not logged in display a login
+* When authenticated display a dashboard / admin page with a sidebar containing a link to `/listings`
 
-- every 100ms generates a random integer between 1 and 10000
-- the value gets pushed through the message broker of your choice
+
+### Listings Page
+
+The `/listings` page should display two tabs
+
+* A photos tab, the data for this must be fetched from `https://jsonplaceholder.typicode.com/photos`.
+    * The tab must have pagination, autocomplete / search functionality, filter by odd / even id.
+
+* A users tab, the data for this must be fetched from  `https://jsonplaceholder.typicode.com/users`.
+    * Add expandable row functionality, in the expanded row display a google map with the data contained in the users.address.geo field
 
 
-### COMP 2
+### Bonus points
 
-The services are communicating through a message broker. You can use any protocol and broker you like. The simpler the better.
-If you don’t have any preferences we suggest to use MQTT protocol. You can run MQTT broker using the toke/mosquitto image:
-
-```
-docker run -it -p 1883:1883 --name=mosquitto  toke/mosquitto
-```
+* Add Internalisation to this app, so english and a language of your choice 
+    * Add a button that allows a user to switch between languages
 
 
 ### Hints
 
-At the end it should roughly look like this:
-
-![Image of services](/frontend-devs/frontend-challenge.png)
-
-- You're free to use any languages and any libraries.
-
-- The fastest way to get mqtt broker is to run mosquitto with docker:
-    ```
-    docker run -it -p 1883:1883 --name=mosquitto  toke/mosquitto
-    ```
-
-### Bonus points
-
-* have both random integer generators coordinate with each other so that you never get the same random number from both of them at the same time
+* You are free to use any css framework out there (bootstrap/material design/semantic ui)
+* You can also use create-react-app to speed things up
