@@ -7,7 +7,7 @@ The Challenge creates a foundation for further onsite collaboration during your 
 
 ## How to complete a Challenge
 
-* Select a challenge and create a new git repository for that project.
+* Create a new git repository for the challenge.
 * Organize your work within that repository. When you get to a stopping point, archive the repository (or publish it, if you prefer) and send it to us.
 
 
