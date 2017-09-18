@@ -23,6 +23,14 @@ The system you need to implement consists of the following components:
 * When authenticated display a dashboard / admin page with a sidebar containing a link to `/listings`
 
 
+### Dashboard / Admin View
+
+* add some nice looking graphs / charts to the Admin view
+    * the graphs can be based on random data or any other data source you have access to
+    * don't spend to much time thinking about what to display here, we just wan't to see some nice looking graphs
+
+Use any plotting library of your choice. If you don't know any feel free to use [recharts](http://recharts.org/#/en-US/)
+
 ### Listings Page
 
 The `/listings` page should display two tabs
