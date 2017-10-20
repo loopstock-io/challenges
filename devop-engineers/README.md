@@ -26,17 +26,15 @@ We'd like you to take a moment and think about exactly what functionality is nee
 
 For example:
 
-'''
-
+```
 {
-	"name": "restock service",
-	"input": ["storage room id", "items in storage room", "minimum required quantity of each item"],
-	"output": ["trigger order for specific items OR none"],
-	"functions": ["Service compares desired item quantity in a room with actual item count.", "Where item count is smaller than minimum quantity, trigger an order for the item."],
-	"comms": ["ordering service", "rfid reader service"]
+  "name": "restock service",
+  "input": ["storage room id", "items in storage room", "minimum required quantity of each item"],
+  "output": ["trigger order for specific items", "none"],
+  "functions": ["Service compares desired item quantity in a room with actual item count.", "Where item count is smaller than minimum quantity, trigger an order for the item."],
+  "comms": ["ordering service", "rfid reader service"]
 }
-
-'''
+```
 
 
 ### Datamodel and database structure
